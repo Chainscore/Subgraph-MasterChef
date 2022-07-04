@@ -1,6 +1,22 @@
-type ExampleEntity @entity {
+type DepositTxn @entity {
   id: ID!
   count: BigInt!
   user: Bytes! # address
   pid: BigInt! # uint256
+  amount: BigDecimal! 
+}
+
+type EmergencyWithdrawalTxn @entity {
+  id: ID!
+  user: Bytes! # address
+  pid: BigInt! # uint256
+  amount: BigDecimal!
+}
+
+
+type WithdrawTxn @entity {
+  id: ID!
+  user: Bytes! # address
+  pid: BigInt! # uint256
+  amount: BigDecimal!
 }
